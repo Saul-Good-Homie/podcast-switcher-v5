@@ -1,6 +1,7 @@
 const express = require('express')
 const request = require('request');
 const dotenv = require('dotenv');
+const path = require('path')
 
 const port = 8888
 
@@ -26,6 +27,7 @@ var generateRandomString = function (length) {
 
 var app = express();
 app.use(express.static(path.join(__dirname, '../build')));
+console.log(spotify_redirect_uri)
 
 app.get('/auth/login', (req, res) => {
   console.log("calling /auth/login")
