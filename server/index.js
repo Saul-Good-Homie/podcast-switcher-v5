@@ -24,6 +24,7 @@ var generateRandomString = function (length) {
 };
 
 var app = express();
+app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/auth/login', (req, res) => {
 
@@ -76,4 +77,4 @@ app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
 })
 
-app.use(express.static(path.join(__dirname, '../build')));
+
