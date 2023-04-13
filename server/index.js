@@ -28,6 +28,8 @@ var app = express();
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/auth/login', (req, res) => {
+  console.log("calling /auth/login")
+  console.log(spotify_redirect_uri)
 
   var scope = "streaming user-read-email user-read-private"
   var state = generateRandomString(16);
