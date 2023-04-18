@@ -3,7 +3,7 @@ const request = require('request');
 const dotenv = require('dotenv');
 const path = require('path')
 
-const port = 8888
+const port = process.env.PORT || 8888
 
 global.access_token = ''
 
@@ -26,7 +26,13 @@ var generateRandomString = function (length) {
 };
 
 var app = express();
+
+app.listen(port, () => {
+  console.log(`Listening at http://localhost:${port}`)
+})
+
 app.use(express.static(path.join(__dirname, '../build')));
+
 console.log(spotify_redirect_uri)
 
 app.get('/auth/login', (req, res) => {
@@ -78,8 +84,6 @@ app.get('/auth/token', (req, res) => {
   res.json({ access_token: access_token})
 })
 
-app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`)
-})
+
 
 
