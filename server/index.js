@@ -27,13 +27,15 @@ var generateRandomString = function (length) {
 
 var app = express();
 
-app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`)
-})
-
 app.use(express.static(path.join(__dirname, '../build')));
 
-console.log(spotify_redirect_uri)
+app.listen(port, () => {
+  console.log("app listening")
+  console.log(`Listening at http://localhost:${port}`)
+  console.log(spotify_redirect_uri)
+})
+
+
 
 app.get('/auth/login', (req, res) => {
   console.log("calling /auth/login")

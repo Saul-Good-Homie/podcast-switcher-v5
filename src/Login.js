@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Login() {
+    console.log("loading login page")
     return (
         <div className="App">
             <header className="App-header">
