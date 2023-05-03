@@ -7,12 +7,19 @@
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "node server",
-    "dev": "run-p server start"
+    // "start": "react-scripts start",
+    // "build": "react-scripts build",
+    // "test": "react-scripts test",
+    // "eject": "react-scripts eject",
+    // "server": "node server",
+    // "dev": "run-p server start"
+
+      "start": "cd server && npm run start-server",
+      "start-server": "node index.js",
+      "client-install": "cd src && npm install",
+      "client": "cd src && npm start",
+      "dev": "concurrently \"npm run start-server\" \"npm run client\"",
+      "build": "cd src && npm run build"
   },
   "browserslist": {
     "production": [
