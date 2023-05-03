@@ -12,7 +12,7 @@
       "client-install": "cd src && npm install",
       "client": "cd src && npm start",
       "dev": "concurrently \"npm run start-server\" \"npm run client\"",
-      "build": "cd src && npm run build"
+      "build": "npm run build"
   },
   "browserslist": {
     "production": [
