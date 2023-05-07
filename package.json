@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "cd ./server && npm install && node index.js",
-    "build": "cd ./src && npm install && npm run build",
+    "build": "npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server",
