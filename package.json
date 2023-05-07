@@ -12,8 +12,8 @@
     "request": "^2.88.2"
   },
   "scripts": {
-    "start": "cd ./server && npm install && node index.js",
-    "build": "npm install && npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server",
